@@ -1,0 +1,40 @@
+#btn-remove-all{
+    color: #000 !important;
+}
+body{
+    width: 350px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.todo-item .btn-remove-todo {
+    display:none;
+    float: left;
+}
+
+.todo-item:hover .btn-remove-todo {
+    display: block;
+}
+
+.todo-item .todo-content {
+    font-weight: bold;
+}
+.todo-item.completed .todo-content {
+    color:darkgray;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+#todo-list {
+    margin-top: 15px;
+    float: right;
+    text-align: right;
+    direction: rtl;
+}
+
+#btn-remove-all {
+    margin-bottom: 10px;
+}
+.dirRTL{
+    direction: rtl;
+}

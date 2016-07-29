@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+a, a:hover, a:active, a:visited{
+    color: #FFF !important;
+}
+#btn-remove-all{
+    color: #000 !important;
+}
+body{
+    font-family: 'Droid Arabic Kufi';
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color:#FFF;
+    z-index: 1;
+    background-color: #333;
+}
+.background-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: url(bg-overlay.png);
+    background-size: 100% 100%;
+}
+.fadein {
+    -webkit-animation: fadein .5s ease 0s forwards;
+}
+.Ramadan_day{
+    font-size: 1.1em;
+    line-height: 30px;
+    text-align: right;
+    direction: rtl;
+    left: 29%;
+}
+#fatawa-data{
+    background-color: rgba(157, 157, 157, 0.65);
+    border-radius: 12px;
+    padding: 2px;
+}
+.todo-item .btn-remove-todo {
+    display:none;
+    float: left;
+}
+.todo-item:hover .btn-remove-todo {
+    display: block;
+}
+.todo-item .todo-content {
+    font-weight: bold;
+}
+.todo-item.completed .todo-content {
+    color:darkgray;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+#todo-list {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    float: right;
+    text-align: right;
+    direction: rtl;
+    font-size: 0.9em;
+    background-color: rgba(157, 157, 157, 0.65);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.todo-toolbar{
+    padding-top: 5px;
+    background-color: rgba(157, 157, 157, 0.65);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#btn-remove-all {
+    margin-bottom: 10px;
+}
+.dirRTL{
+    direction: rtl;
+}
+.glyphicon{
+    cursor: pointer;
+}
+.bottom-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: 0.85em;
+}
+.hadith{
+    position: absolute;
+    bottom: 15px;
+    right: 26.5%;
+    text-align: center;
+    font-size: 1.1em;
+}
+.col-md-4 , .col-md-3, .col-md-5 , .col-md-6, .col-md-8, .row{
+    z-index: 100;
+}

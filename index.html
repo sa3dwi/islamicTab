@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <title> رمضان 1437 </title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller='todoCtrl' back-img="">
+    <div class="background-overlay fadein"></div>
+    <div class='row'>
+        <div class='row text-center dirRTL'>
+            <br>
+            <h2 id="HajriDate">
+                <!-- get Hajri date-->
+            </h2>
+        </div>
+        <div class="clearfix"></div>
+        <br><br><br>
+        <div class='col-md-5 Ramadan_day'>
+            <span>فتاوى مختارة</span>
+            <div id="fatawa-data">
+                <!--get fatawa here-->
+            </div>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-3 bottom-right'>
+
+            <div class='col-md-8' id="todo-list">
+                <div class='todo-item col-md-12' ng-repeat='todo in todoList track by todo.id| orderBy: createdAt' ng-class='{completed: todo.completed}'>
+                    <label><input type='checkbox' ng-model='todo.completed' ng-click='toggleCompleted()'/>
+                    <span class='todo-content'>{{todo.content}}</span></label>
+                    <a class='btn-remove-todo pull-left' ng-click='remove(todo)'><i class='glyphicon glyphicon-remove'></i> </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class='col-md-8 todo-toolbar pull-right'>
+                <div id='toolbar'>
+                    <a id="btn-remove-all"
+                       ng-click='removeAll()'
+                       class='btn btn-small btn-default pull-left'
+                       ng-show="todoList.length > 0">
+                        <i class="glyphicon glyphicon-remove"></i> حذف الكل
+                    </a>
+                </div>
+                <h4 class="text-right right"> المهام الغير منجزة {{ (todoList | filter: {completed:false}).length}}</h4>
+                <form id='todo-form' ng-submit='add()'>
+                    <div class="form-group">
+                        <input type='text' id='new-todo' ng-model='newContent' class="form-control text-right dirRTL" placeholder="ماذا الذى تنوى فعله اليوم؟"/>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 hadith" id="hadith">
+            <!--get hadith data-->
+        </div>
+
+        <div class="col-md-3 bottom-left">
+            <a href="http://raf-thani.com/donation.php?DonateID=62">تبرع لحلب</a>&nbsp;&nbsp;
+            <a href="http://saadawi.me">اتصل بى</a>&nbsp;&nbsp;
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/todoCtrl.js"></script>
+    <script type="text/javascript" src="app/todoStorage.js"></script>
+</body>
+</html>
